@@ -1,0 +1,3 @@
+[submodule "puppetmaster"]
+	path = puppetmaster
+	url = git@github.com:meetings/puppetmaster.git
