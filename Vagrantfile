@@ -1,11 +1,11 @@
 # Vagrant configuration for Meetin.gs local development environment
-# 2014-04-12 / Meetin.gs
+# 2014-04-14 / Meetin.gs
 
 VAGRANTFILE_API_VERSION = "2"
 
 if File.exists?("Vagrantfile.d/#{ENV['USER']}.rb")
   load "Vagrantfile.d/#{ENV['USER']}.rb"
-elsif File.exists?("Vagrantfile.d/default.rb}")
+elsif File.exists?("Vagrantfile.d/default.rb")
   load "Vagrantfile.d/default.rb"
 end
 
