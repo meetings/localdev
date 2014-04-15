@@ -1,0 +1,4 @@
+#!/bin/bash
+VAGRANTDIR="$( cd "$( dirname "$0" )" && cd .. && pwd )"
+cd $VAGRANTDIR
+vagrant ssh -c 'sudo su' -- -q

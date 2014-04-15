@@ -1,0 +1,5 @@
+#!/bin/bash
+BASEDIR="$( cd "$( dirname "$0" )" && pwd )"
+echo "alias vr='$BASEDIR/root_dev_run'" >> ~/.profile
+echo "alias d='$BASEDIR/root_dev_run d'" >> ~/.profile 
+echo "alias vs='$BASEDIR/root_dev_ssh'" >> ~/.profile
