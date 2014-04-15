@@ -5,5 +5,8 @@
 # Vagrantfile.d/USERNAME.rb is not found.
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  # config.vm.network "forwarded_port", guest: 443, host: 4443 # example
+    config.vm.network "forwarded_port", guest: 8088, host: 12080
+    config.vm.network "forwarded_port", guest: 443,  host: 12443
+
+#    config.vm.synced_folder "/home/user/git/dcp", "/opt/meetings/dcp" # example
 end
