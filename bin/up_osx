@@ -1,4 +1,3 @@
 #!/bin/bash
 bin/local_forward
 vagrant up
-
