@@ -1,5 +1,5 @@
 # Vagrant configuration for Meetin.gs local development environment
-# 2014-04-14 / Meetin.gs
+# 2014-04-16 / Meetin.gs
 
 VAGRANTFILE_API_VERSION = "2"
 
@@ -13,7 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   ### Machine settings
   #
   config.vm.hostname = "localdev"
-  config.vm.box      = "localdev32"
+  config.vm.box      = "localdev-2014-04-16"
   config.vm.box_url  = "http://ubuntu.meetin.gs/localdev.box"
 
   ### Provisioning
