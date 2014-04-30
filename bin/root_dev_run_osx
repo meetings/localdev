@@ -2,4 +2,5 @@
 ARGS="$@"
 VAGRANTDIR="$( cd "$( dirname "$0" )" && cd .. && pwd )"
 cd $VAGRANTDIR
+bin/ensure_up_osx
 vagrant ssh -c "sudo sh -c '$ARGS'" -- -q

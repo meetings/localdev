@@ -1,0 +1,6 @@
+#!/bin/bash
+PSCOUNT=$(ps axu|grep VirtualBox|grep -v grep)
+if [ "$PSCOUNT" = "" ]
+then
+bin/up_osx
+fi

@@ -1,4 +1,5 @@
 #!/bin/bash
 VAGRANTDIR="$( cd "$( dirname "$0" )" && cd .. && pwd )"
 cd $VAGRANTDIR
+bin/ensure_up_osx
 vagrant ssh -c 'sudo su' -- -q
