@@ -1,10 +1,10 @@
 #!/bin/bash
 
 sudo sh -c '
-if ((`ipfw show |grep 8888|wc -l` == "0"));
-	then ipfw add 100 fwd 127.0.0.1,8888 tcp from any to me 80 > /dev/null;
+if ((`ipfw show |grep 12080|wc -l` == "0"));
+	then ipfw add 100 fwd 127.0.0.1,12080 tcp from any to me 80 > /dev/null;
 fi;
-if ((`ipfw show |grep 8889|wc -l` == "0"));
-	then ipfw add 101 fwd 127.0.0.1,8889 tcp from any to me 443 > /dev/null;
+if ((`ipfw show |grep 12443|wc -l` == "0"));
+	then ipfw add 101 fwd 127.0.0.1,12443 tcp from any to me 443 > /dev/null;
 fi;
 '
