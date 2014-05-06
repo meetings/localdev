@@ -1,5 +1,5 @@
 #!/bin/bash
-# provision: autodeploy.sh, 2014-04-10 / Meetin.gs
+# provision: autodeploy.sh, 2014-05-06 / Meetin.gs
 
 set -u
 
@@ -27,11 +27,15 @@ for SERVICE in /vagrant/autodeploy/*.env; do
 
     if [ ! -d $DIR ]; then
         git clone $URL $INTENT 2>&1
-        cd $DIR
-        ./$DEPLOYDIR/init.sh 2>&1
     fi
 
     cd $DIR
+
+    if [ ! -f $BASEDIR/.inited.$INTENT ]; then
+        touch $BASEDIR/.inited.$INTENT
+        ./$DEPLOYDIR/init.sh 2>&1
+    fi
+
     export FORCE=yes
     ./$DEPLOYDIR/update.sh 2>&1
 done
