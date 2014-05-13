@@ -31,3 +31,8 @@ mysql --force crmjournal < /vagrant/sql/values.sql
 
 echo " *** Restarting web server"
 service lighttpd restart
+
+echo " *** Enabling root development"
+/opt/meetings/dcp/bin/root_development_config
+
+
